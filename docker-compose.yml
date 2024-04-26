@@ -1,0 +1,17 @@
+# Use root/example user/password credentials
+version: '3.1'
+services:
+  postgres:
+    image: postgres
+    restart: always
+    hostname: aaa_blog
+    environment:
+      POSTGRES_DB: aaa_blog
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - 5440:5432
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+volumes:
+  postgres-data:
