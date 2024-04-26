@@ -28,11 +28,6 @@ export default buildConfig({
     },
   }),
   cors: '*',
-  csrf: [
-    // whitelist of domains to allow cookie auth from
-    'http://localhost',
-    'https://appsandapertures.com',
-  ],
   async onInit(payload) {
     const existingUsers = await payload.find({
       collection: 'users',
